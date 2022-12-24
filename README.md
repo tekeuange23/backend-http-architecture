@@ -1,6 +1,6 @@
 # Backend Http Architecture (LAMP)
 
-<a href="https://docs.google.com/drawings/d/1zROz5TgqlxTYyUZmYpfboMwyyuLxX3HV0jR6tkByKzw/edit?usp=sharing"><img src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/architecture.png?v=1.0" alt="Full-Stack JavaScript Architecture" /></a>
+<a href="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/docs/neuralnets-nginx.jpg"><img src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/docs/neuralnets-nginx.jpg" alt="Full-Stack JavaScript Architecture" /></a>
 
 Project architecture for LAMP applications.
 
