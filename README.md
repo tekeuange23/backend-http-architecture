@@ -2,7 +2,7 @@
 
 <a href="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/docs/nginx.jpg"><img src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/docs/nginx.jpg" alt="Full-Stack JavaScript Architecture" /></a>
 
-Project architecture for LAMP applications.
+This Project architecture for LAMP applications.
 
 
 ## About
@@ -25,42 +25,42 @@ A typical product (SaaS, etc.) usually consists of following services:
 
 ## Core Structure
     bha
-      ??? /etc/nginx
-      |   ??? conf.d
+      |-- /etc/nginx
+      |   |-- conf.d
       |   |   >  default.conf
       |   |   >  www_lamp_transaction.conf
-      |   ??? nginx.conf
-      |   ??? fastcgi_params
+      |   |-- nginx.conf
+      |   |__ fastcgi_params
       |
-      ??? assets
-      |   ??? css
+      |-- assets
+      |   |-- css
       |   |   > Bootstrap
       |   |   > Style
       |   |
-      |   ??? scripts
+      |   |__ scripts
       |       > JQuery
       |       > autocomplete JS
       |
-      ??? components
+      |-- components
       |   > Menu
       |   > Header
       |   > Forms
       |
-      ??? pages
+      |-- pages
       |   > Home
       |   > Signup
       |   > Signin
       |   > Transaction
       |
-      ??? functions
+      |-- functions
       |   > Authentification
       |   > Autocompletion
       |   > Transaction ($$)
       |
-      ??? logs
+      |-- logs
       |   > Error Logs
       |
-      ??? README.md (you are here)
+      |__ README.md (you are here)
 
 ## Stack
 
@@ -75,8 +75,7 @@ A typical product (SaaS, etc.) usually consists of following services:
 
 ### Frontend
 - Landing
-    - Html
-    - Css
+    - HTML, CSS
     - Server Side Rendering
     - Bootstrap
 
