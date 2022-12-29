@@ -32,7 +32,7 @@
 	<body>
 		<div class="my-5 text-center">
 			<img class="mb-4" src="./assets/brand/bootstrap-solid.svg" alt="" width="72" height="72" />
-			<h1 class="mb-3 h3 font-weight-normal">PHPSERVER.COM</h1>
+			<h1 class="mb-3 h3 font-weight-normal">TRANSACTION.COM</h1>
 			<p>Welcome to our platform which will helps you to easyly perform <code>Transactions</code> to user that you will find in.</p>
 		</div>
 
