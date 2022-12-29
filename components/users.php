@@ -39,7 +39,7 @@ try {
     $conn->close();
 } catch (PDOException $e) {
     $message = $e->getMessage();
-    // header("Location: http://phpserver.cm/signin?message=" . $message);
+    // header("Location: http://transaction.cm/signin?message=" . $message);
 }
 
 ?>

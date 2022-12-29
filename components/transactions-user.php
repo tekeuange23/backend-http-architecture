@@ -66,11 +66,11 @@ if (isset($_GET["user"])) {
     } catch (PDOException $e) {
         $message = $e->getMessage();
         // echo $message;
-        header("Location: http://phpserver.cm/signin?message=" . $message);
+        header("Location: http://transaction.cm/signin?message=" . $message);
     }?>
 
 <?php
 } else {
-    header("Location: http://phpserver.cm/");
+    header("Location: http://transaction.cm/");
 }?>
 </div>

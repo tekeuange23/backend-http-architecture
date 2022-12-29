@@ -17,5 +17,5 @@ $(document).ready(function () {
 
 // const userNameInput = document.getElementById('userName');
 // userNameInput.addEventListener('keyup', () => {
-// 	fetch('http://phpserver.cm/functions/autocomplete.php', { method: 'POST', body: { userName: userNameInput.value } });
+// 	fetch('http://transaction.cm/functions/autocomplete.php', { method: 'POST', body: { userName: userNameInput.value } });
 // });

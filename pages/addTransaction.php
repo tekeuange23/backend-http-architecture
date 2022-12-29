@@ -91,7 +91,7 @@
 									var userName = $(this).val();
 									if (userName !== '') {
 										$.ajax({
-											url: 'http://phpserver.cm/functions/autocomplete.php',
+											url: 'http://transaction.cm/functions/autocomplete.php',
 											method: 'POST',
 											data: { userName: userName },
 											success: function (data) {

@@ -24,15 +24,15 @@ if (isset($_POST["userId"]) && isset($_POST["montant"]) && isset($_POST["devise"
         $conn->exec($sql);
         // echo "<main style=\"margin: auto; width: 25rem;\">" .
         //     $transactionJSON .
-        //     "<br/><br/><a href=\"http://phpserver.cm\" style=\"font-size: 1.3rem;\"> < Back To The Register</a>" .
+        //     "<br/><br/><a href=\"http://transaction.cm\" style=\"font-size: 1.3rem;\"> < Back To The Register</a>" .
         //     "</main>";
-        header("Location: http://phpserver.cm");
+        header("Location: http://transaction.cm");
 
     } catch (PDOException $e) {
         $message = $e->getMessage();
         echo $message;
-        // header("Location: http://phpserver.cm/new-transaction?message=" . $message);
+        // header("Location: http://transaction.cm/new-transaction?message=" . $message);
     }
 } else {
-    header("Location: http://phpserver.cm/new-transaction");
+    header("Location: http://transaction.cm/new-transaction");
 }

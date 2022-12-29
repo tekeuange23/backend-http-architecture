@@ -24,16 +24,16 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["nom"]) 
         $conn->exec($sql);
         // echo "<main style=\"margin: auto; width: 25rem;\">" .
         //     $userJSON .
-        //     "<br/><br/><a href=\"http://phpserver.cm\" style=\"font-size: 1.3rem;\"> < Back To The Register</a>" .
+        //     "<br/><br/><a href=\"http://transaction.cm\" style=\"font-size: 1.3rem;\"> < Back To The Register</a>" .
         //     "</main>";
-        header("Location: http://phpserver.cm/signin");
+        header("Location: http://transaction.cm/signin");
 
     } catch (PDOException $e) {
         $message = $e->getMessage();
-        header("Location: http://phpserver.cm/signup?message=" . $message);
+        header("Location: http://transaction.cm/signup?message=" . $message);
     }
 } else if (isset($_POST["signup"])) {
-    header("Location: http://phpserver.cm/signup");
+    header("Location: http://transaction.cm/signup");
 }
 
 /**
@@ -75,10 +75,10 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"])
                 setcookie('myname', 'myname', time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
                 // echo json_encode($connectedUser);
                 // echo json_encode($_SESSION);
-                header("Location: http://phpserver.cm");
+                header("Location: http://transaction.cm");
             }
         } else {
-            header("Location: http://phpserver.cm/signin");
+            header("Location: http://transaction.cm/signin");
         }
         $conn->close();
 
@@ -86,13 +86,13 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"])
         $message = $e->getMessage();
         echo $message;
         echo $user;
-        header("Location: http://phpserver.cm/signin?message=" . $message);
+        header("Location: http://transaction.cm/signin?message=" . $message);
     }
 
     $conn = null;
 
 } else if (isset($_POST["signin"])) {
-    header("Location: http://phpserver.cm/signin");
+    header("Location: http://transaction.cm/signin");
 }
 
 /**
@@ -108,6 +108,6 @@ if (isset($_POST["logout"])) {
         // print_r(json_encode($_SESSION));
         // print_r(json_encode($_COOKIE));
         // echo "<script>alert('HAH')</script>";
-        header("Location: http://phpserver.cm/signin");
+        header("Location: http://transaction.cm/signin");
     }
 }

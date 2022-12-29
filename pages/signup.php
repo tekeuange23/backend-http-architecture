@@ -129,7 +129,7 @@
 					</div>
 				</div>
 
-				<p class="text-center text-muted"><a href="http://phpserver.cm/signin">Se connecter.</a></p>
+				<p class="text-center text-muted"><a href="http://transaction.cm/signin">Se connecter.</a></p>
 
 				<div class="row" style="width: 100%">
 					<div class="col-md-10 offset-md-1 order-md-1">

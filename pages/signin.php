@@ -53,7 +53,7 @@
 				<label> <input type="checkbox" value="remember-me" /> Remember me </label>
 			</div>
 
-			<p class="text-center text-muted"><a href="http://phpserver.cm/signup">Creer un compte.</a></p>
+			<p class="text-center text-muted"><a href="http://transaction.cm/signup">Creer un compte.</a></p>
 
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		</form>
