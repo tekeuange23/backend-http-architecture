@@ -57,9 +57,6 @@ A typical product (SaaS, etc.) usually consists of following services:
       |   > Autocompletion
       |   > Transaction ($$)
       |
-      |-- logs
-      |   > Error Logs
-      |
       |__ README.md (you are here)
 
 ## Stack
@@ -122,25 +119,34 @@ View all screenshots [here](https://github.com/atulmy/atulmy.github.io/tree/mast
 <table>
   <tbody>
     <tr>
-      <td colspan="2">Landing</td>
+      <td colspan="2"> <font size=3>Authentication</font></td>
     </tr>
     <tr>
       <td>
-        <img alt="Landing" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/landing/Screenshot%202018-11-26%20at%208.42.33%20PM.png" />
+        <img alt="Landing" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/signup.png" /> &rarr; Signup
       </td>
       <td>
-        <img alt="Landing" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/landing/Screenshot%202018-11-26%20at%208.42.44%20PM.png" />
+        <img alt="Landing" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/signin.png" />  &rarr; Signin
       </td>
     </tr>
     <tr>
-      <td colspan="2">Web</td>
+      <td colspan="2"> <font size=3>Users</font></td>
     </tr>
     <tr>
       <td>
-        <img alt="Web" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/web/Screenshot%202018-11-26%20at%208.43.29%20PM.png" />
-      </td>
+        <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/users.png" /> &rarr; List of all the users
+      </td> 
       <td>
-        <img alt="Web" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/web/Screenshot%202018-11-26%20at%208.44.25%20PM.png" />
+        <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/user-detail.png" /> &rarr; Ange's transaction
+      </td>
+   </tr>
+    <tr>
+      <td colspan="2"> <font size=3>Transaction</font></td>
+    </tr>
+    <tr>
+      <td>
+        <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/new-transaction.png" /> &rarr; Create a new transaction
+      </td>
    </tr>
   </tbody>
 </table>
