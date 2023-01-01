@@ -1,1 +1,12 @@
-logs
+
+# Webserver
+/.htaccess
+
+# Scriptfiles
+logs/
+*.log
+
+# various files
+._*
+.~lock.*
+*.bak
