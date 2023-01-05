@@ -147,6 +147,17 @@ View all screenshots [here](https://github.com/atulmy/atulmy.github.io/tree/mast
       <td>
         <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/new-transaction.png" /> &rarr; Create a new transaction
       </td>
+    </tr>
+    <tr>
+      <td colspan="2"> <font size=3>Cache</font></td>
+    </tr>
+    <tr>
+      <td>
+        <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/cache-inspection.png" /> &rarr; Inspection
+      </td>
+      <td>
+        <img alt="Web" src="https://raw.githubusercontent.com/tekeuange23/backend-http-architecture/master/images/screenshots/X-proxy-Cache.png" /> &rarr; X-proxy-Cache header in response attribute
+      </td>
    </tr>
   </tbody>
 </table>
