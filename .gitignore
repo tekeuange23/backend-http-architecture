@@ -2,9 +2,14 @@
 # Webserver
 /.htaccess
 
-# Scriptfiles
-logs/
-*.log
+# Cache
+data/*
+
+# Logs
+./**/*.log
+cache/logs/*
+php-server/logs/*
+
 
 # various files
 ._*
