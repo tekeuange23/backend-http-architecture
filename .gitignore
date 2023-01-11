@@ -11,3 +11,5 @@ cache/data/*
 ._*
 .~lock.*
 *.bak
+
+# node (fastify)
