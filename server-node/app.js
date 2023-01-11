@@ -1,25 +1,14 @@
-'use strict'
+import Fastify from 'fastify'
+const fastify = Fastify({
+  logger: true
+})
 
-const path = require('path')
-const AutoLoad = require('@fastify/autoload')
+fastify.get('/', async (request, reply) => {
+  reply.type('application/json').code(200)
+  return { hello: 'world' }
+})
 
-module.exports = async function (fastify, opts) {
-  // Place here your custom code!
-
-  // Do not touch the following lines
-
-  // This loads all plugins defined in plugins
-  // those should be support plugins that are reused
-  // through your application
-  fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'plugins'),
-    options: Object.assign({}, opts)
-  })
-
-  // This loads all plugins defined in routes
-  // define your routes in one of these
-  fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'routes'),
-    options: Object.assign({}, opts)
-  })
-}
+fastify.listen({ port: 3000 }, (err, address) => {
+  if (err) throw err
+  // Server is now listening on ${address}
+})
