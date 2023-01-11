@@ -1,15 +1,11 @@
-
 # Webserver
 /.htaccess
 
 # Cache
-data/*
+cache/data/*
 
 # Logs
-./**/*.log
-cache/logs/*
-php-server/logs/*
-
+*.log
 
 # various files
 ._*
