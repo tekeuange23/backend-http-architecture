@@ -13,3 +13,4 @@ cache/data/*
 *.bak
 
 # node (fastify)
+.env

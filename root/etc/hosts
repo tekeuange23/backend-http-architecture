@@ -2,9 +2,13 @@
 
 ## Transactions DNS setup ##
 
-# backend server
-127.0.0.1	www.transaction-backend.cm
-127.0.0.1	transaction-backend.cm
+# backend server (php)
+127.0.0.1	www.backend.transaction.cm
+127.0.0.1	backend.transaction.cm
+
+# api server (node)
+127.0.0.1	www.api.transaction.cm
+127.0.0.1	api.transaction.cm
 
 # cache server
 127.0.0.1	www.transaction.cm
