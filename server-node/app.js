@@ -2,8 +2,8 @@ import Fastify from 'fastify'
 import * as dotenv from 'dotenv'
 
 // Routes
-import UserRoute from './routes/user.js'
-import TransactionRoute from './routes/transaction.js'
+import UserRoute from './routes/user.routes.js'
+import TransactionRoute from './routes/transaction.routes.js'
 
 // Instanciation
 const fastify = new Array(3);
