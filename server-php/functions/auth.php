@@ -40,6 +40,7 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["nom"]) 
 |***************************************************************************| SIGN IN |***************************************************************************|
  */
 if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"]) && !isset($_POST["prenom"]) && !isset($_POST["date_naissance"]) && !isset($_POST["ville"]) && !isset($_POST["pays"]) && isset($_POST["signin"])) {
+    $user = new stdClass();
     $user->login = $_POST['login'];
     $user->password = $_POST['password'];
 
@@ -69,9 +70,10 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"])
                 session_start();
                 session_regenerate_id();
                 $_SESSION['currentUser'] = $connectedUser;
-                $_SESSION["password"] = sha1($connectedUser['password']); // call sha1() function
+                // $_SESSION["password"] = sha1($connectedUser['password']); // call sha1() function
 
-                setcookie('currentUser', $connectedUser, time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
+                // setcookie('currentUser', $connectedUser, time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
+                setcookie('currentUser', json_encode($connectedUser), time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
                 setcookie('myname', 'myname', time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
                 // echo json_encode($connectedUser);
                 // echo json_encode($_SESSION);
