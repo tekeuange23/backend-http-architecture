@@ -25,37 +25,43 @@ A typical product (SaaS, etc.) usually consists of following services:
 
 ## Core Structure
     bha
-      |-- /etc/nginx
+      |-- root/etc/nginx
+      |   |
       |   |-- conf.d
       |   |   >  default.conf
-      |   |   >  www_lamp_transaction.conf
+      |   |   >  www_transaction_api.conf
+      |   |   >  www_transaction_backend.conf
+      |   |   >  www_transaction_cache.conf
+      |   |-- fastcgi_params
       |   |-- nginx.conf
-      |   |__ fastcgi_params
+      |   |__ proxy_params
       |
-      |-- assets
-      |   |-- css
-      |   |   > Bootstrap
-      |   |   > Style
+      |-- server-php
       |   |
-      |   |__ scripts
-      |       > JQuery
-      |       > autocomplete JS
-      |
-      |-- components
-      |   > Menu
-      |   > Header
-      |   > Forms
-      |
-      |-- pages
-      |   > Home
-      |   > Signup
-      |   > Signin
-      |   > Transaction
-      |
-      |-- functions
-      |   > Authentification
-      |   > Autocompletion
-      |   > Transaction ($$)
+      |   |-- assets
+      |   |   |-- css
+      |   |   |   > Bootstrap
+      |   |   |   > Style
+      |   |   |
+      |   |   |__ scripts
+      |   |       > JQuery
+      |   |       > autocomplete JS
+      |   |
+      |   |-- components
+      |   |   > Menu
+      |   |   > Header
+      |   |   > Forms
+      |   |
+      |   |-- pages
+      |   |   > Home
+      |   |   > Signup
+      |   |   > Signin
+      |   |   > Transaction
+      |   |
+      |   |-- functions
+      |       > Authentification
+      |       > Autocompletion
+      |       > Transaction ($$)
       |
       |__ README.md (you are here)
 
@@ -63,7 +69,7 @@ A typical product (SaaS, etc.) usually consists of following services:
 
 ### Backend
 - API
-    - PHP
+    - Restful API
     - Server Side Rendering
 - Database
     - MySQL
@@ -86,7 +92,9 @@ A typical product (SaaS, etc.) usually consists of following services:
 
 ## Setup and Running
 - Prerequisites
-    - UBUNTU (`>= v14.x`)
+    - UBUNTU (`v18.04`)
+    - NodeJS (`v16.17`)
+    - Fastify (`v4.11.0`)
     - PHP (`v7.2`)
     - Bootstrap (`v3.5`)
 
@@ -103,13 +111,17 @@ A typical product (SaaS, etc.) usually consists of following services:
         - The `root` folder representt the key files which need update in the Linux OS.
 - **Web**
     - Configuration
-        - Modify `.env.local` for
-            - `PORT` (`80`)
-            - `URL` (`http://transaction.cm`)
+        - Modify `.env` for
+            - `DB_HOST` (`localhost`)
+            - `DB_NAME` (`rsd418`)
+            - `DB_PORT` (`3306`)
+            - `DB_USER` (``)
+            - `DB_PASS` (``)
+            - `DB_DIALECT` (`mysql`)
     - Setup
         - Install dependencies: `npm install`
     - Run
-        - Start Web server: `npm start`, browse at http://localhost:5000
+        - Start Web server: `npm start`, browse at http://api.transaction.cm:5000
        
      
 ## Screenshots
