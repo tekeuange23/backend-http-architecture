@@ -63,6 +63,21 @@ A typical product (SaaS, etc.) usually consists of following services:
       |       > Autocompletion
       |       > Transaction ($$)
       |
+      |-- server-node
+      |   |
+      |   | > app.js
+      |   | > package.json.js
+      |   |
+      |   |-- routes
+      |   |   > transaction.routes.js
+      |   |   > user.routes.js
+      |   |   > .env
+      |
+      |-- cache
+      |   |
+      |   |-- data
+      |   |-- logs
+      |
       |__ README.md (you are here)
 
 ## Stack
