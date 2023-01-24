@@ -57,27 +57,29 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"])
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $connectedUser['id'] = $row["id"];
-                $connectedUser['nom'] = $row["nom"];
-                $connectedUser['prenom'] = $row["prenom"];
+                $connectedUser['id']             = $row["id"];
+                $connectedUser['nom']            = $row["nom"];
+                $connectedUser['prenom']         = $row["prenom"];
                 $connectedUser['date_naissance'] = $row["date_naissance"];
-                $connectedUser['login'] = $row["login"];
+                $connectedUser['login']          = $row["login"];
+                $connectedUser['date_naissance'] = $row["date_naissance"];
+                $connectedUser['ville']          = $row["ville"];
+                $connectedUser['pays']           = $row["pays"];
                 // $connectedUser['password'] = $row["id"];
-                $connectedUser['date_naissance'] = $row["date_naissance"];
-                $connectedUser['ville'] = $row["ville"];
-                $connectedUser['pays'] = $row["pays"];
 
                 session_start();
                 session_regenerate_id();
                 $_SESSION['currentUser'] = $connectedUser;
                 // $_SESSION["password"] = sha1($connectedUser['password']); // call sha1() function
+                
+                setcookie('currentUser', json_encode($connectedUser), time() + 365 * 24 * 3600, null, '/', false, true); // On set un cookie
+                setcookie('myname', 'myname', time() + 365 * 24 * 3600, null, '/', false, true); // On set un cookie
+                
+                echo '<h1>'.$result->num_rows.'</h1>';
+                echo json_encode($connectedUser);
+                echo json_encode($_SESSION);
 
-                // setcookie('currentUser', $connectedUser, time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
-                setcookie('currentUser', json_encode($connectedUser), time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
-                setcookie('myname', 'myname', time() + 365 * 24 * 3600, null, '/', false, true); // On écrit un cookie
-                // echo json_encode($connectedUser);
-                // echo json_encode($_SESSION);
-                header("Location: http://transaction.cm");
+                header("Location: http://transaction.cm/users");
             }
         } else {
             header("Location: http://transaction.cm/signin");
@@ -95,7 +97,7 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && !isset($_POST["nom"])
 
 } else if (isset($_POST["signin"])) {
     header("Location: http://transaction.cm/signin");
-}
+}   
 
 /**
 |***************************************************************************| LOG-OUT |***************************************************************************|
@@ -107,9 +109,9 @@ if (isset($_POST["logout"])) {
         session_unset();
         session_destroy();
         // setcookie("currentUser", "", time() - 3600);
-        // print_r(json_encode($_SESSION));
-        // print_r(json_encode($_COOKIE));
-        // echo "<script>alert('HAH')</script>";
+        print_r(json_encode($_SESSION));
+        print_r(json_encode($_COOKIE));
+        echo "<script>alert('HAH')</script>";
         header("Location: http://transaction.cm/signin");
     }
 }
