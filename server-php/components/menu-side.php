@@ -51,7 +51,7 @@
           <span>General</span>
         </li>
         <li class="sidebar-dropdown">
-          <a href="/">
+          <a href="/users">
             <i class="fa fa-users"></i>
             <span>Users</span>
           </a>
