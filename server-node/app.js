@@ -27,14 +27,15 @@ for (const [i, port] of [3000, 3001, 3002].entries()) {
 
   // Route registering
   fastify[i].get('/', async (request, reply) => {
-    reply.type('application/json').code(200)
-    console.log(Object.keys(fastify[i]).sort());
-    const connection = fastify[i].mysql.getConnection()
-    fastify.mysql.query('SELECT id, username, hash, salt FROM users WHERE id=?', [req.params.id], function onResult (err, result) {
-        reply.send(err || result)
-    })
+    // reply.type('application/json').code(200)
+    // console.log(Object.keys(fastify[i]).sort());
+    // const connection = fastify[i].mysql.getConnection()
+    // fastify.mysql.query('SELECT id, username, hash, salt FROM users WHERE id=?', [req.params.id], function onResult (err, result) {
+    //     reply.send(err || result)
+    // })
     
-    return Object.keys(fastify[i].mysql)
+    // return Object.keys(fastify[i].mysql)
+    return {debug: true}
   })
 
   fastify[i].register(UserRoute, { logLevel: 'info' })
