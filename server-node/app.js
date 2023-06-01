@@ -19,7 +19,7 @@ for (const [i, port] of [3000, 3001, 3002].entries()) {
   // URI format  ---->    mysql://user:password@hostname:port/database
   const { DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_DIALECT } = process.env
   const connectionString = DB_DIALECT + '://' + DB_USER + ':' + DB_PASS + '@' + DB_HOST + ':' + DB_PORT + '/' + DB_NAME
-  console.log(connectionString)
+  // console.log(connectionString)
 
   fastify[i].register(fastifyMysql, {
     connectionString

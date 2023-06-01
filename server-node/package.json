@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve1": "PORT1=3001 node app.js",
-    "serve2": "PORT2=3002 node app.js",
-    "serve3": "PORT3=3003 node app.js",
+    "serve1": "PORT=3001 node app.js",
+    "serve2": "PORT=3002 node app.js",
+    "serve3": "PORT=3003 node app.js",
     "test": "npm run serve1 && npm run serve2 && npm run serve3",
     "start": "nodemon app.js"
   },
